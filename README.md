@@ -13,15 +13,14 @@
   - [Run Tests](#run-tests)
   - [Run Linting](#run-linting)
   - [Interact with the Local Ethereum Blockchain directly](#interact-with-the-local-ethereum-blockchain-directly)
-- [Things missing & futur improvements](#things-missing--futur-improvements)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Goal
 
-Basic Node.js Express backend API, with MongoDB database and Ethereum blockchain.
+Node.js Express API, with MongoDB and Ethereum blockchain.
 
-**Disclaimer**: this is not a DApp per se. Actually it's more of a 'CApp' (Centralized App), as the intelligence and the users' private keys are stored in the server. The Ethereum Blockchain is used to validate and store transactions, but there is no smart contract capabilities.
+Private keys are stored in the server. The Ethereum Blockchain is used to validate and store transactions.
 
 ## Get started
 
@@ -34,7 +33,7 @@ Basic Node.js Express backend API, with MongoDB database and Ethereum blockchain
 npm install
 ```
 
-3. Run MongoDB in the background (in another terminal)
+3. Run MongoDB or on atlas in terminal
 ```
 sudo service mongod start
 ```
@@ -109,8 +108,21 @@ npm run test
 npm run lint
 ```
 
+### Login
 
-### Interact with the Local Ethereum Blockchain directly
+![alt text](https://user-images.githubusercontent.com/16665636/99883523-75748900-2c41-11eb-991a-765f24402b67.png)
+
+### User added
+
+![alt text](https://user-images.githubusercontent.com/16665636/99883543-9dfc8300-2c41-11eb-99e4-466e6db56622.png)
+
+### Users list
+
+![alt text](https://user-images.githubusercontent.com/16665636/99883497-4c53f880-2c41-11eb-8b13-8eb72ea59444.png)
+
+
+
+### Interact with Local Ethereum Blockchain 
 
 ```
 node scripts/ethereum_scriptsjs <command>
@@ -120,11 +132,3 @@ node scripts/ethereum_scriptsjs <command>
 ```
 
 
-## Things missing & futur improvements
-
-- Encrypt User.ethereum_account_private_key in database
-- Authorization layer: can only update your data, can only view your transactions, etc
-- Integration Tests with Ethereum/Ganache
-- Unit Tests
-- [Mockgoose](https://github.com/mockgoose/mockgoose) in memory database for tests
-- REPL to interact with the database using the models
