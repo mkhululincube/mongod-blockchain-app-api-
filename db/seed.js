@@ -31,17 +31,9 @@ User.collection.drop();
 
 const createUsers = () => {
   return User.create([{
-    username: 'agent1',
-    email: 'agent1@email.com',
-    password: 'agent1'
-  }, {
-    username: 'user1',
-    email: 'user1@email.com',
-    password: 'user1'
-  }, {
-    username: 'user2',
-    email: 'user2@email.com',
-    password: 'user2'
+    username: 'admin',
+    email: 'mkayz89@email.com',
+    password: 'admin'
   }]);
 };
 
